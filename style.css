@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+ 
+}
+
+.painel-esquerdo {
+  flex: 2;
+  background: #660099;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.usu {
+  width: 50%;
+  align-self: center;
+}
+
+.waveesquerda {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+.wavedireita {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.painel-direito {
+  background: #EFF4DB;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  text-align: center;
+  width: 80%;
+  max-width: 350px;
+}
+
+.logo {
+  width: 70%;
+  margin-bottom: 5%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input {
+  padding: 5%;
+  border: none;
+  border-radius: 5px;
+  background: #303E4D;
+  color: #c0f060;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #c0f060;
+}
+
+button {
+  padding: 15px;
+  background: #c0f060;
+  color: #303E4D;
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c0f060b9;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  
+  .painel-direito {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .usu {
+    width: 70%;
+  }
+
+  .waveesquerda,
+  .wavedireita {
+    display: none;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+  
+  .painel-esquerdo {
+    display: none;
+  }
+}
